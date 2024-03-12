@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { CreateDictionaryDto } from '../dictionary';
 
 export class PublicProductType {
   @ApiProperty({
@@ -28,4 +29,26 @@ export class PublicProductType {
     required: false,
   })
   image: string;
+}
+
+export class TypeWithLocales {
+  @ApiProperty({
+    description: 'ID',
+    example: 1,
+    required: true,
+  })
+  id: number;
+
+  @ApiProperty()
+  name: CreateDictionaryDto;
+
+  @ApiProperty()
+  description: CreateDictionaryDto;
+
+  @ApiProperty({
+    description: 'Brand logo',
+    example: 'https://path/to/image',
+    required: false,
+  })
+  image?: string;
 }

@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { CreateDictionaryDto } from '../dictionary';
 
 export class PublicBrand {
   @ApiProperty({
@@ -21,6 +22,28 @@ export class PublicBrand {
     required: false,
   })
   description?: string;
+
+  @ApiProperty({
+    description: 'Brand logo',
+    example: 'https://path/to/image',
+    required: false,
+  })
+  image?: string;
+}
+
+export class BrandWithLocales {
+  @ApiProperty({
+    description: 'ID',
+    example: 1,
+    required: true,
+  })
+  id: number;
+
+  @ApiProperty()
+  name: CreateDictionaryDto;
+
+  @ApiProperty()
+  description: CreateDictionaryDto;
 
   @ApiProperty({
     description: 'Brand logo',
