@@ -39,7 +39,7 @@ export class CreateTypePropertyDto {
   @ApiProperty({ example: 'l/m²', description: 'Property suffix (ru)' })
   @IsOptional()
   @IsString()
-  suffix?: string;
+  suffix: string;
 
   @ApiProperty({
     example: true,
