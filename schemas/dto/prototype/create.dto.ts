@@ -1,10 +1,17 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, IsOptional, IsBoolean } from 'class-validator';
+import {
+  IsString,
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsBoolean,
+  IsPositive,
+} from 'class-validator';
 
-export class CreateTypeDto {
+export class CreatePrototypeDto {
   @ApiProperty({
-    example: 'Paint',
-    description: 'Type name (ru)',
+    example: 'Amphibolin',
+    description: 'Name of production',
     required: true,
   })
   @IsString()
@@ -12,18 +19,30 @@ export class CreateTypeDto {
   name: string;
 
   @ApiProperty({
-    example: 'All paints',
-    description: 'Type description (ru)',
+    example: 'best pain',
+    description: 'Production description',
     required: false,
   })
   @IsOptional()
   @IsString()
   description?: string;
+
+  @ApiProperty({ example: 1, description: 'Brand ID' })
+  @IsNumber()
+  @IsPositive()
+  @IsNotEmpty()
+  brandId: number;
+
+  @ApiProperty({ example: 1, description: 'Type ID' })
+  @IsNumber()
+  @IsNotEmpty()
+  @IsPositive()
+  typeId: number;
 }
 
-export class CreateTypePropertyDto {
+export class CreatePrototypePropertyDto {
   @ApiProperty({
-    example: 'field of application',
+    example: 'Consumption',
     description: 'Property name (ru)',
   })
   @IsString()
@@ -52,7 +71,7 @@ export class CreateTypePropertyDto {
   display?: boolean;
 }
 
-export class CreateTypePropertyValueDto {
+export class CreatePrototypePropertyValueDto {
   @ApiProperty({ example: 'interier', description: 'Property value (ru)' })
   @IsString()
   @IsNotEmpty()
