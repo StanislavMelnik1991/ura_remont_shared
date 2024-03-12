@@ -1,1 +1,1 @@
-export * from './id.dto';
+export * from './response.type';
