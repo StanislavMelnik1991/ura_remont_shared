@@ -71,7 +71,7 @@ export class CreatePrototypePropertyDto {
   display?: boolean;
 }
 
-export class CreatePrototypePropertyValueDto {
+export class CreateValueDto {
   @ApiProperty({ example: 'interier', description: 'Property value (ru)' })
   @IsString()
   @IsNotEmpty()

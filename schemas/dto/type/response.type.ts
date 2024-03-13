@@ -46,7 +46,7 @@ export class TypeWithLocales {
   description: CreateDictionaryDto;
 
   @ApiProperty({
-    description: 'Brand logo',
+    description: 'Type Image',
     example: 'https://path/to/image',
     required: false,
   })

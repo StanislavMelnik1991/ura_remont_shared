@@ -1,49 +1,17 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { CreateDictionaryDto } from '../dictionary';
 
-export class PublicProductPrototype {
+export class ProductPrototypeResponse {
   @ApiProperty({
     description: 'ID',
     example: 1,
     required: true,
   })
   id: number;
-
-  @ApiProperty({
-    description: 'Brand name',
-    example: 'Caparol',
-    required: true,
-  })
-  name: string;
-
-  @ApiProperty({
-    description: 'Brand description',
-    example: 'The most common manufacturer of facade paints',
-    required: false,
-  })
-  description: string;
-
-  @ApiProperty({
-    description: 'Brand logo',
-    example: 'https://path/to/image',
-    required: false,
-  })
-  image: string;
-
-  @ApiProperty({ example: 1, description: 'Brand ID' })
-  brandId: number;
-
-  @ApiProperty({ example: 1, description: 'Type ID' })
-  typeId: number;
-}
-
-export class PrototypeWithLocales {
-  @ApiProperty({
-    description: 'ID',
-    example: 1,
-    required: true,
-  })
-  id: number;
+  @ApiProperty()
+  createdAt: Date;
+  @ApiProperty()
+  updatedAt: Date;
 
   @ApiProperty({ example: 1, description: 'Brand ID' })
   brandId: number;
