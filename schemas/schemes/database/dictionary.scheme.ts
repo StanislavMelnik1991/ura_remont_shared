@@ -1,12 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { BaseScheme } from '../base';
 
-export class PublicDictionary {
-  @ApiProperty({
-    description: 'ID',
-    example: 1,
-  })
-  id: number;
-
+export class DictionaryScheme extends BaseScheme {
   @ApiProperty({
     description: 'ru language value',
     required: true,
@@ -42,3 +37,7 @@ export class PublicDictionary {
   })
   pl?: string;
 }
+
+export type DictionarySchemeType = {
+  [P in keyof DictionaryScheme]: DictionaryScheme[P];
+};

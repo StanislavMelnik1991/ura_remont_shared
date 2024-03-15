@@ -1,8 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString, IsNotEmpty, Matches } from 'class-validator';
 import { PASSWORD_REGEX } from 'shared/constants/regex.constants';
+import { UserSchemeType } from 'shared/schemas/schemes';
 
-export class SingUpDto {
+export class AuthDto implements Pick<UserSchemeType, 'login' | 'password'> {
   @ApiProperty({ example: 'Admin' })
   @IsString()
   @IsNotEmpty()
