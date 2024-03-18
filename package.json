@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nestjs/swagger": "*",
-    "class-transformer": "*",
-    "class-validator": "*"
+    "zod": "*"
   }
 }
