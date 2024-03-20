@@ -6,4 +6,5 @@ export interface IUserTelegram extends BaseInterface {
   photo_url: string;
   auth_date: Date;
   userId: number;
+  telegramId: number;
 }
