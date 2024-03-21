@@ -10,6 +10,6 @@ export class CreateRoute extends BaseRouter {
     this.scheme = scheme;
   }
   getRoute(id: number) {
-    return this.baseRoute.replace(this.prototypeIdMask, String(id));
+    return this.baseRoute.replace(`:${this.prototypeIdMask}`, String(id));
   }
 }

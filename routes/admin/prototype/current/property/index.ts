@@ -13,6 +13,6 @@ export class PropertyRoute extends BaseRouter {
     this.create = new CreateRoute(this.baseRoute, this.prototypeIdMask);
   }
   getRoute(id: number) {
-    return this.baseRoute.replace(this.prototypeIdMask, String(id));
+    return this.baseRoute.replace(`:${this.prototypeIdMask}`, String(id));
   }
 }

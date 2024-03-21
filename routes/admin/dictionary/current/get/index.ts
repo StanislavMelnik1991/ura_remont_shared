@@ -7,6 +7,6 @@ export class GetRoute extends BaseRouter {
     this.dictionaryIdMask = dictionaryIdMask;
   }
   getRoute(id: number) {
-    return this.baseRoute.replace(this.dictionaryIdMask, String(id));
+    return this.baseRoute.replace(`:${this.dictionaryIdMask}`, String(id));
   }
 }

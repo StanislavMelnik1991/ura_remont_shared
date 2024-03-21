@@ -7,6 +7,6 @@ export class GetCharacteristicRoute extends BaseRouter {
     this.typeIdMask = idMask;
   }
   getRoute(id: number) {
-    return this.baseRoute.replace(this.typeIdMask, String(id));
+    return this.baseRoute.replace(`:${this.typeIdMask}`, String(id));
   }
 }
