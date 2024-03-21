@@ -1,13 +1,13 @@
 import { BaseRouter } from '../baseRouter';
 import { AdminRouter } from './admin';
-import { TelegramRouter } from './telegram';
+import { LoginRouter } from './login';
 
 class AdminClientRouter extends BaseRouter {
-  telegramAuth: TelegramRouter;
+  login: LoginRouter;
   admin: AdminRouter;
   constructor() {
     super([]);
-    this.telegramAuth = new TelegramRouter(this.baseRoute);
+    this.login = new LoginRouter(this.baseRoute);
     this.admin = new AdminRouter(this.baseRoute);
   }
 }
