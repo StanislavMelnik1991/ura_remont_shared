@@ -9,3 +9,4 @@ export * from './prototype.interface';
 export * from './type.interface';
 export * from './user.interface';
 export * from './userTelegram.interface';
+export * from './image.interface';
