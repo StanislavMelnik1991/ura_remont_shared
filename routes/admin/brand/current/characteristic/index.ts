@@ -6,6 +6,7 @@ export class CharacteristicRoute extends BaseRouter {
   private typeIdMask: string;
   create: CreateCharacteristicRoute;
   getAll: GetCharacteristicRoute;
+  getRoute: (id: number) => string;
   constructor(baseRoute: string, idMask: string) {
     super([baseRoute, 'characteristics']);
     this.typeIdMask = idMask;
@@ -14,8 +15,6 @@ export class CharacteristicRoute extends BaseRouter {
       this.baseRoute,
       this.typeIdMask,
     );
-  }
-  getRoute(id: number) {
-    return this.baseRoute.replace(`:${this.typeIdMask}`, String(id));
+    this.getRoute = (id) => `${baseRoute}/${id}`;
   }
 }
