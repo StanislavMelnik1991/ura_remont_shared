@@ -1,12 +1,17 @@
 import { BaseInterface } from './base.interface';
-import { IDictionary } from '.';
+import { IDictionary, IImage } from '.';
 
 export interface IBrand extends BaseInterface {
   nameId: number;
   descriptionId: number;
 }
 
-export interface IBrandLocalized extends BaseInterface {
+export interface IBrandFull extends BaseInterface {
   name: IDictionary;
   description: IDictionary;
+  images: ImageList;
+}
+
+interface ImageList extends BaseInterface {
+  images: Array<IImage>;
 }
