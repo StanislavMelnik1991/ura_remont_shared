@@ -1,4 +1,4 @@
-import { RolesEnum } from '../../constants';
+import { RolesEnum } from 'shared-constants';
 import { BaseInterface } from './base.interface';
 
 export interface IUser extends BaseInterface {

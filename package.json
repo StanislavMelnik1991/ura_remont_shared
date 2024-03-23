@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "shared-constants": "workspace:*",
+    "shared-router": "workspace:*",
+    "schemas": "workspace:*",
+    "types": "workspace:*",
     "zod": "*"
   }
 }
