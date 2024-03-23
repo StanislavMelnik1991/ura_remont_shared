@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const schemeCreateProduct =  z
+export const productCreateScheme =  z
   .object({
     prototypeId: z.number().positive().int(),
     externalId: z.string(),
@@ -9,3 +9,4 @@ export const schemeCreateProduct =  z
     price: z.number().positive(),
   })
   .required();
+  

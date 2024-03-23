@@ -1,9 +1,9 @@
-import { schemeTelegramAuth } from "schemas";
+import { authTelegramScheme } from "schemas";
 
 export const apiRouter = {
   tgLogin: {
     route: '/api/auth/telegram',
-    scheme: schemeTelegramAuth
+    scheme: authTelegramScheme
   },
   // ToDo: to delete
   deleteUser: {

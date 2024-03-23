@@ -1,5 +1,0 @@
-packages:
-  - ./constants/*
-  - ./router/*
-  - ./schemas/*
-  - ./types/*

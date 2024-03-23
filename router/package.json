@@ -1,5 +1,5 @@
 {
-  "name": "shared-router",
+  "name": "router",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
@@ -9,5 +9,18 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "schemas": "workspace:*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "lint-staged": "*",
+    "typescript": "*"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --ext ts --ext tsx --fix"
+    ]
+  }
 }

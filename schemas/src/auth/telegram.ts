@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const schemeTelegramAuth = z
+export const authTelegramScheme = z
   .object({
     id: z.string(),
     first_name: z.string().optional().nullable(),
