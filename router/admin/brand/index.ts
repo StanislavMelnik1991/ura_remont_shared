@@ -10,6 +10,11 @@ export const brand = {
     mask: 'id',
     getRoute: (id: number) => `/api/admin/brand/${id}`,
   },
+  deleteOne: {
+    route: '/api/admin/brand/:id',
+    mask: 'id',
+    getRoute: (id: number) => `/api/admin/brand/${id}`,
+  },
   uploadImage: {
     route: '/api/admin/brand/:id',
     mask: 'id',
