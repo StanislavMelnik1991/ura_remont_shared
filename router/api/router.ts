@@ -1,5 +1,5 @@
 import { auth } from './auth';
-import { images } from './auth/images';
+import { images } from './images';
 
 export const apiRouter = {
   auth,
