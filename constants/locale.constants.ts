@@ -7,3 +7,11 @@ export enum AcceptedLanguagesEnum {
 }
 
 export type AcceptedLanguages = 'ru' | 'en' | 'be' | 'uk' | 'pl';
+
+export enum LanguageLabels {
+  RU = 'Русский',
+  EN = 'English',
+  BE = 'Беларуская',
+  UK = 'Українська',
+  PL = 'Poland',
+}
