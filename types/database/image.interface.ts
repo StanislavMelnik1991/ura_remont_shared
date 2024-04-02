@@ -6,3 +6,7 @@ export interface IImage extends BaseInterface {
   listId: number;
   index?: number;
 }
+
+export interface IImageList extends BaseInterface {
+  images: Array<IImage>;
+}
